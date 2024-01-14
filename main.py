@@ -55,11 +55,14 @@ def send_to_chatGPT(messages, model="gpt-3.5-turbo"):
     messages.append(response.choices[0].message)
     return message
 
-messages = []
+
+messages = [{"role": "user", "content": "Please act like Jarvis from Iron man."}]
+
 
 while True:
     text = record_text()
     messages.append({"role": "user", "content": text})
+    print(messages)
     # print("current message: " + str(messages))
     response = send_to_chatGPT(messages)
     print(response)
