@@ -15,4 +15,5 @@ Techniques and some codes are learnt from these videos:
 pip install -r requirements.txt
 ```
 Make sure you have downloaded and installed **portaudio** (if not already)
+
 4. Run main.py
