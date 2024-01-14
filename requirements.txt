@@ -1,0 +1,5 @@
+python-dotenv
+SpeechRecognition
+playsound
+gtts
+openai

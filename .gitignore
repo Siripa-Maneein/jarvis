@@ -1,0 +1,4 @@
+.env
+venv/
+output.mp3
+.idea/
