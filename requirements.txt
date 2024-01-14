@@ -3,3 +3,4 @@ SpeechRecognition
 playsound
 gtts
 openai
+pyaudio
