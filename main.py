@@ -26,12 +26,11 @@ def record_text():
         try:
             with sr.Microphone() as source2:
                 r.adjust_for_ambient_noise(source2, duration=1)
-                print("I'm listening")
+                print("Jarvis: (I'm listening...)")
 
                 audio2 = r.listen(source2)
                 try:
                     my_text = r.recognize_google(audio2)
-                    print(my_text)
                 except:
                     print("sorry, could not recognise")
                     my_text = ""
@@ -62,9 +61,8 @@ messages = [{"role": "user", "content": "Please act like Jarvis from Iron man."}
 while True:
     text = record_text()
     messages.append({"role": "user", "content": text})
-    print(messages)
-    # print("current message: " + str(messages))
+    print("You: " + str(text))
     response = send_to_chatGPT(messages)
-    print(response)
+    print("Jarvis: " + str(response))
     text_to_speech(response)
     playsound("output.mp3")
